@@ -1,9 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/gentle-cable-418618/flask-app:latest', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/gentle-cable-418618/flask-app/flask-img:latest', '.']
   dir: 'flask-app'
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'us-central1-docker.pkg.dev/gentle-cable-418618/flask-app:latest']
+  args: ['push', 'us-central1-docker.pkg.dev/gentle-cable-418618/flask-app/flask-img:latest']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['compute', 'instances', 'reset', 'flask-app-instance', '--zone', 'us-central1-a']
 
