@@ -102,7 +102,7 @@ resource "google_compute_instance" "default" {
 spec:
   containers:
     - name: flask-app
-      image: us-central1-docker.pkg.dev/apt-cycling-418613/ci-assign2/flask-img
+      image: us-central1-docker.pkg.dev/apt-cycling-418613/ci-assign2/flask-img:latest
       env:
         - name: PORT
           value: "5000"
