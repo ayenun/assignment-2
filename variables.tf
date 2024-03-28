@@ -12,5 +12,5 @@ variable "region" {
 variable "zones" {
   description = "The zones where resources will be created"
   type        = list(string)
-  default     = ["us-central-a", "us-central-b", "us-central-c"]
+  default     = ["us-central1-a", "us-central1-b", "us-central1-c"]
 }
