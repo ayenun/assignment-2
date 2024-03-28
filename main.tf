@@ -4,7 +4,7 @@ provider "google" {
 }
 
 resource "google_compute_network" "vpc_network" {
-  name = "naher-vpc-new"
+  name = "naher-vpc"
 }
 
 # Public Subnet
@@ -102,7 +102,7 @@ resource "google_compute_instance" "default" {
 spec:
   containers:
     - name: flask-app
-      image: us-central1-docker.pkg.dev/apt-cycling-418613/ci-assign2/flask-img:latest
+      image: us-central1-docker.pkg.dev/gentle-cable-418618/flask-app/flask-img:latest
       env:
         - name: PORT
           value: "5000"
